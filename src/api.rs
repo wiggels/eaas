@@ -17,7 +17,7 @@ struct ErrorQuery {
             email = "wiggels@gmail.com",
             url = "https://wiggels.dev"
         ),
-        license(name = "MIT", url = "https://opensource.org/licenses/MIT")
+        license(name = "MIT License", url = "https://opensource.org/licenses/MIT")
     ),
     paths(any, client, host),
     components()
