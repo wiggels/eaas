@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Errors-as-a-Service 🚨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bs-body-bg: #f8f9fa;
+      --bs-body-color: #212529;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bs-body-bg: #0f1117;
+        --bs-body-color: #f8f8f2;
+      }
+    }
+
+    body {
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
+    }
+
+    .hero {
+      padding: 6rem 1rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .section-card {
+      background: rgba(0,0,0,0.05);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .section-card {
+        background: rgba(255,255,255,0.05);
+      }
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      footer {
+        color: #aaa;
+      }
+    }
+		footer a {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		footer a:hover {
+			color: inherit;
+			opacity: 0.8;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.text-muted {
+				color: #aaa !important;
+			}
+		}
+  </style>
+</head>
+<body>
+  <div class="container text-center hero">
+    <h1>Errors-as-a-Service</h1>
+    <p class="lead mb-4">
+      Chaos engineering for people who can’t afford real chaos.<br/>
+      Give your app the random outages it secretly craves.
+    </p>
+    <a href="/swagger-ui/" class="btn btn-primary btn-lg">Try It Now →</a>
+
+		<div class="section-card text-start">
+      <h5>Latest News</h5>
+      <p>We’ve raised $8M to keep breaking things on purpose. Investors are thrilled about our lack of reliability.</p>
+    </div>
+
+		<div class="section-card text-start">
+		<div class="section-card text-center">
+			<h5>Simple Pricing</h5>
+
+			<div class="row mt-4">
+				<!-- Developer Plan -->
+				<div class="col-md-6 mb-3">
+					<div class="card h-100">
+						<div class="card-body">
+							<h6 class="card-title">Developer</h6>
+							<p class="h4">$0<span class="fs-6">/month</span></p>
+							<p class="text-muted">Perfect for developers with no users and infinite time to debug.</p>
+							<ul class="list-unstyled">
+								<li>10,000 error responses/mo</li>
+								<li>Community “support” (good luck)</li>
+								<li>Docs with typos</li>
+								<li>Public API key that might work</li>
+							</ul>
+							<a href="/swagger-ui/" class="btn btn-outline-primary btn-sm">Get Started</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Enterprise Plan -->
+				<div class="col-md-6 mb-3">
+					<div class="card h-100">
+						<div class="card-body">
+							<h6 class="card-title">Enterprise</h6>
+							<p class="h4">$499<span class="fs-6">/month</span></p>
+							<p class="text-muted">For teams that need production-grade unreliability at scale.</p>
+							<ul class="list-unstyled">
+								<li>No sponsored error messages</li>
+								<li>Unlimited 5xx per second</li>
+								<li>24/7 priority blame-shifting</li>
+								<li>Custom incident retro templates</li>
+							</ul>
+							<p class="text-muted small mt-3">Enterprise plan is temporarily unavailable due to overwhelming demand.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <div class="section-card text-start">
+      <h5>System Status</h5>
+      <p><small class="text-muted">34 minutes ago</small><br>
+				<span class="badge bg-danger">Ongoing</span> Our host error API is occasionally returning 418 (I'm a Teapot) instead of 5xx. Our unpaid intern says it's "working as intended."</p>
+      <p><small class="text-muted">2 days ago</small><br>
+				<span class="badge bg-success">Resolved</span> We accidentally returned 204 No Content for all requests. We apologize for any successful deployments this may have caused.</p>
+			<p><small class="text-muted">5 days ago</small><br>
+				<span class="badge bg-success">Resolved</span>
+				A test flag meant for staging accidentally propagated to production. All traffic briefly routed to /dev/null. Restored. We’ll do a retro nobody will read.
+			</p>
+		</div>
+
+    <footer class="text-center">
+      <p class="mt-4">© 2025 <a href="https://wiggels.dev">Hunter Wigelsworth</a>. If it works, we did something wrong.</p>
+    </footer>
+  </div>
+</body>
+</html>
